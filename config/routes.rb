@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'static_pages#home'
-  get '/about' to: 'static_pages#about'
+  get '/about', to: 'static_pages#about'
 
-  resources: users
-  resources: things
+  resources :users
+  resources :things
 
 
   # Example of regular route:
