@@ -11,5 +11,6 @@ class UsersController < ApplicationController
 		if @user != current_user
 			redirect_to current_user
 		end
+		@thing = Thing.new
 	end
 end
