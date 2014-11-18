@@ -9,6 +9,11 @@ Rails.application.routes.draw do
   get '/about', to: 'static_pages#about'
 
   resources :things
+  resources :users
+
+  get 'user_root' => 'current_user', as: :user_root
+
+
 
 
   # Example of regular route:

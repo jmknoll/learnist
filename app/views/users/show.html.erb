@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+
+			<%= @user.email %>
+			<div class="row">
+				<% @user.things.each do |thing| %>
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title"><%= thing.title %></h3>
+						</div>
+						<div class="panel-body">
+							<%= thing.content %>
+						</div>
+					</div>
+				</div>
+				<% end %>
+			</div>
+		</div>
+	</div>
+</div>
