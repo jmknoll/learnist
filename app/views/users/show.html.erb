@@ -1,8 +1,9 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-
-			<h1>Currently Learning</h1>
+			<% if current_user.things.count > 0 %>
+				<h1>Currently Learning</h1>
+				<% end %>
 			<div class="row">
 				<% @user.things.each do |thing| %>
 				<div class="col-md-4">
@@ -13,12 +14,11 @@
 						<div class="panel-body">
 							<%= thing.content %>
 							<% thing.notes.each do |note| %>
-								<li><%= note.content %></li>
+								<li class="progress-note"><span class="light"><%= note.created_at.strftime('%b %e') %>:</span> <%= note.content %></li>
 							<% end %>
 						</div>
 						<div class="panel-body">
 							<%= form_for [ thing, @note ] do |f| %>
-								<%= f.label :content %>
 								<%= f.text_field :content %>
 								<%= f.submit "Add Progress Note" %>
 							<% end %>
@@ -28,15 +28,19 @@
 				<% end %>
 			</div>
 			<div class="row">
-				<div class="col-md-6 col-md-offset-3">
-					<h2>What else are you learning?</h2>
+				<div class="col-md-6 col-md-offset-3 goal-form">
+					<% if current_user.things.count == 0 %>
+						<h2>Get started by inputting something that you want to learn.</h2>
+						<h3>Then make sure that you track your progress daily</h3>
+					<% else %>
+						<h2>What else are you learning?</h2>
+					<% end %>
 					<%= form_for @thing do |f| %>
-						<%= f.label :title %>
+						<!-- <%= f.label :title %> -->
 						<%= f.text_field :title %>
-						<%= f.label :content %>
-						<%= f.text_field :content %>
-						<%= f.label :user_id %>
-						<%= f.number_field :user_id %>
+						<!-- <%= f.label :content %>
+						<%= f.text_field :content %> -->
+
 						<%= f.submit "Add New Goal" %>
 					<% end %>
 				</div>
