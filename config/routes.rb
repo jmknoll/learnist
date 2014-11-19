@@ -8,9 +8,12 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get '/about', to: 'static_pages#about'
 
-  resources :things
   resources :users
 
+  resources :things do
+    resources :notes
+  end
+  
   get 'user_root' => 'current_user', as: :user_root
 
 

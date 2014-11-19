@@ -12,5 +12,6 @@ class UsersController < ApplicationController
 			redirect_to current_user
 		end
 		@thing = Thing.new
+		@note = Note.new
 	end
 end
