@@ -13,8 +13,6 @@ Rails.application.routes.draw do
   resources :things do
     resources :notes
   end
-  
-  get 'user_root' => 'current_user', as: :user_root
 
 
 
