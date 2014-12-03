@@ -1,3 +1,20 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.goal-form {
+	text-align: center;
+}
+
+li {
+	list-style-type: none;
+}
+
+.progress-note {
+	padding: 3px;
+	border-bottom: 1px solid lightgrey;
+}
+
+.light {
+	color: grey;
+}
