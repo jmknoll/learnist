@@ -18,5 +18,30 @@
 @import "bootstrap";
 
 .navbar {
-	padding-top: 8px;
+	padding-top: 13px;
+	background-color: hsl(173,58%,50%);
+
+	a {
+	background-color: white;
+	padding: 5px 10px;
+	margin: 10px 10px 0 10px;
+	border-radius: 25px;
+	transition: color 1s, background-color 1s;
+	}
+	
+	a:hover {
+		text-decoration: none;
+		background-color: black;
+		color: white;
+	}
+}
+
+.devise-form {
+	border: 1px solid black;
+	padding: 20px;
+	border-radius: 10px;
+
+	* {
+	margin-bottom: 10px;
+	}
 }
