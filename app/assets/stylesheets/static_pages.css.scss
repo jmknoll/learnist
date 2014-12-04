@@ -27,7 +27,7 @@
 
 .main {
 	background: linear-gradient(to bottom, blue, white);
-	background-image: image-url('images/clouds.jpg'); 
+	background-image: asset-url('clouds.jpg', image); 
 	background-size: cover;
 	margin-top: -25px;
 	width: 100%;
