@@ -1,11 +1,17 @@
 <nav class="navbar navbar-default" role="navigation">
-	<div class="container">
-		<div class="navbar-left">
-			<%= link_to "LEARNIST", root_path %> 
-			<%= link_to "About", about_path %>
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mobile-navbar-main">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<%= link_to "LEARNIST", root_path, id: "brand-name" %> 
 		</div>
-		<div class="navbar-right">
-			<ul>
+		<div class="collapse navbar-collapse" id="mobile-navbar-main">
+			<ul class="nav navbar-nav">
+				<%= link_to "About", about_path %>
 				<% if user_signed_in? %>
 					<%= link_to 'My Profile', current_user %> 
 					<%= link_to 'Edit Profile', edit_user_registration_path %> 
