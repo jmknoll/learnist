@@ -48,3 +48,27 @@
 		padding-top: 3px;
 	}
 }
+
+
+@media (max-width: 480px) {
+
+	.jumbotron {
+		width: 100%;
+		margin: 0 auto;
+		opacity: .8;
+		h1 {
+			padding-top: 0;
+			margin-top: 1%;
+			text-align: center;
+			margin-bottom: 30%;
+		}
+		h2 {
+			display: none;
+		}
+		.btn {
+			border-radius: 0;
+			width: 100%;
+			margin: 0;
+		}
+	}
+}
