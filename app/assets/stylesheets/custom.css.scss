@@ -28,7 +28,7 @@
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 770px) {
 	#brand-name {
 		background-color: hsl(173,58%,50%);
 		border-radius: 0;
@@ -49,10 +49,38 @@
 	}
 
 	.navbar-collapse {
+		ul {
+			width: 100%;
+		}
+
 		a {
-			display: block;
+			display: inline;
 			text-align: center;
 			border-radius: 0;
+			width: 25%;
+		}
+	}
+}
+
+@media (max-width: 480px) {
+
+	button.navbar-toggle {
+		position: relative;
+		right: 1%;
+	}
+
+	.navbar-collapse {
+		width: 100%;
+
+		ul {
+			display: inline-block;
+			text-align: center;
+			border-radius: 0;
+			width: 100%;
+		}
+
+		a {
+			width: 100%;
 		}
 	}
 }

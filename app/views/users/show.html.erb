@@ -14,7 +14,7 @@
 						<div class="panel-body">
 							<%= thing.content %>
 							<% thing.notes.each do |note| %>
-								<li class="progress-note"><span class="light"><%= note.created_at.strftime('%b %e') %>:</span> <%= note.content %></li>
+								<li class="progress-note"><span class="light"><%= note.created_at.strftime('%b %e') %>:</span> <%= note.content %><span class="pull-right"><%= link_to "Edit" %></span></li>
 							<% end %>
 						</div>
 						<div class="panel-body">
@@ -22,6 +22,11 @@
 								<%= f.text_field :content %>
 								<%= f.submit "Add Progress Note" %>
 							<% end %>
+							<p class="link-bar">
+								<%=link_to "Edit"%> | 
+								<%=link_to "Archive"%> | 
+								<%=link_to "Delete"%>
+							</p>
 						</div>
 					</div>
 				</div>

@@ -10,7 +10,7 @@
 			<%= link_to "LEARNIST", root_path, id: "brand-name" %> 
 		</div>
 		<div class="collapse navbar-collapse" id="mobile-navbar-main">
-			<ul class="nav navbar-nav">
+			<ul class="nav navbar-nav pull-right">
 				<%= link_to "About", about_path %>
 				<% if user_signed_in? %>
 					<%= link_to 'My Profile', current_user %> 
